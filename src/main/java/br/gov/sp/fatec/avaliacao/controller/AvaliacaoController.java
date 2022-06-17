@@ -28,7 +28,7 @@ public class AvaliacaoController {
         return trabalho;
     }
 
-    @GetMapping(value = "/{idTrabalho}/{nota}")
+    @PostMapping(value = "/{idTrabalho}/{nota}")
     public void avaliar(@PathVariable("idTrabalho") Long idTrabalho, @PathVariable("nota") Integer nota) {
         service.avaliarTrabalho(idTrabalho, nota);
     }
